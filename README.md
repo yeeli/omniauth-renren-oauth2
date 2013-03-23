@@ -8,7 +8,7 @@ Read Renren Oauth2 docs form more details: [http://wiki.dev.renren.com/wiki](htt
 
 Add this line to your application's Gemfile:
 
-    gem 'omniauth-renren2'
+    gem 'omniauth-renren-oauth2'
 
 And then execute:
 
@@ -16,7 +16,7 @@ And then execute:
 
 Or install it yourself as:
 
-    $ gem install omniauth-renren2
+    $ gem install omniauth-renren-oauth2
 
 ## Usage
 
