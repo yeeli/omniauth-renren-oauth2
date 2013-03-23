@@ -1,5 +1,5 @@
 module OmniAuth
-  module Renren2
+  module RenrenOauth2
     VERSION = "0.0.1"
   end
 end
