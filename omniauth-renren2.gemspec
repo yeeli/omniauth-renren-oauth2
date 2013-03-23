@@ -17,6 +17,6 @@ Gem::Specification.new do |spec|
   spec.require_paths = ["lib"]
   spec.version = OmniAuth::Renren2::VERSION
 
-  gem.add_dependency 'omniauth', '~> 1.1'
-  gem.add_dependency 'omniauth-oauth2', '~> 1.1'
+  spec.add_dependency 'omniauth', '~> 1.1'
+  spec.add_dependency 'omniauth-oauth2', '~> 1.1'
 end
