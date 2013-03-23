@@ -5,7 +5,6 @@ require 'omniauth-renren2/version'
 
 Gem::Specification.new do |spec|
   spec.name          = "omniauth-renren2"
-  spec.version       = Omniauth::Renren2::VERSION
   spec.authors       = ["ye.li"]
   spec.email         = ["yeeli@outlook.com"]
   spec.description   = %q{OmniAuth Oauth2 strategy for renren.com}
