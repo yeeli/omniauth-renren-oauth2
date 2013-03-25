@@ -49,11 +49,10 @@ Here's an example Auth Hash available in `request.env['omniauth.auth']`
 
 {"provider"=>"renren",
  "uid"=> "123456789", 
- "info"=> {
-           "uid"=>"123456789", 
-           "gender"=>"Male", 
-           "image"=>"http://hdn.xnimg.cn/photos/1.jpg", 
+ "info"=> { 
            "name"=>"test", 
+           "nickname" => "test",
+           "image"=>"http://hdn.xnimg.cn/photos/1.jpg", 
            "urls"=>{"Renren"=>"http://www.renren.com/222159293/profile"}},
             "credentials"=>{"token"=>"230086|32csdfg435...",
             "refresh_token"=>"230086|32csdfg435...", 
