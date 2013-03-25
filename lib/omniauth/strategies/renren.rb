@@ -14,11 +14,10 @@ module OmniAuth
 
       info do
         {
-          "uid" => raw_info["uid"], 
-          "gender"=> (raw_info["sex"] == 1 ? 'Male' : 'Female'), 
-          "image"=>raw_info["headurl"],
-          'name' => raw_info['name'],
-          'urls' => {
+          :name => raw_info['name'],
+          :nickname => raw_info['name'],
+          :image => raw_info["tinyurl"],
+          :urls => {
             'Renren' => "http://www.renren.com/#{raw_info["uid"]}/profile"
           }
         }
