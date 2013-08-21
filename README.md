@@ -62,13 +62,10 @@ Here's an example Auth Hash available in `request.env['omniauth.auth']`
   "extra"=>{
      "raw_info"=>{
             "uid"=> "123456789", 
-            "tinyurl"=>"http://hdn.xnimg.cn/photos/1.jpg", 
-            "vip"=>1, 
-            "sex"=>1, 
+            "avatar" => [{"size" => "TINY", "url" => "http://hdn.xnimg.cn/photos/1.jpg"}]
             "name"=>"test", 
             "star"=>0, 
-            "headurl"=>"http://hdn.xnimg.cn/photos/1.jpg",
-             "zidou"=>0
+            "basicInformation" => { "sex" => "MALE", "birthday" => "1900-0-0"}
              }
          }
  }
