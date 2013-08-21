@@ -10,15 +10,15 @@ module OmniAuth
         :token_url => '/oauth/token'
       }
 
-      uid { raw_info['uid'] }
+      uid { raw_info['id'] }
 
       info do
         {
           :name => raw_info['name'],
           :nickname => raw_info['name'],
-          :image => raw_info["tinyurl"],
+          :image => raw_info['avatar'][0]['url'],
           :urls => {
-            'Renren' => "http://www.renren.com/#{raw_info["uid"]}/profile"
+            'Renren' => "http://www.renren.com/#{raw_info["id"]}/profile"
           }
         }
       end
@@ -32,8 +32,8 @@ module OmniAuth
       def raw_info
         access_token.options[:mode] = :query
         access_token.options[:param_name] = 'access_token'
-        params ||= { :v => "1.0", :format => "json", :call_id => Time.now.to_i, :method => "users.getInfo" }
-        @raw_info ||= MultiJson.decode(access_token.post( "https://api.renren.com/restserver.do", body: params).body)[0]
+        @uid ||= access_token.get("https://api.renren.com/v2/user/login/get").parsed['response']['id']
+        @raw_info ||= access_token.get("https://api.renren.com/v2/user/get", :params => {'userId' => @uid}).parsed['response']
       end
     end
   end
