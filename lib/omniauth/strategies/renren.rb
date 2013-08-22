@@ -33,6 +33,8 @@ module OmniAuth
         access_token.options[:param_name] = 'access_token'
         @uid ||= access_token.get("https://api.renren.com/v2/user/login/get").parsed['response']['id']
         @raw_info ||= access_token.get("https://api.renren.com/v2/user/get", :params => {'userId' => @uid}).parsed['response']
+      rescue
+        {'id' => nil, 'avatar' => [{'url' => ''}], 'name' => nil}
       end
     end
   end
