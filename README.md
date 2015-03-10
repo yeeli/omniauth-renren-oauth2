@@ -71,13 +71,3 @@ Here's an example Auth Hash available in `request.env['omniauth.auth']`
  }
 
 ```
-
-The precise information available may depend on the permissions which you request.
-
-## Contributing
-
-1. Fork it
-2. Create your feature branch (`git checkout -b my-new-feature`)
-3. Commit your changes (`git commit -am 'Add some feature'`)
-4. Push to the branch (`git push origin my-new-feature`)
-5. Create new Pull Request
